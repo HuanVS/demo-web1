@@ -1,4 +1,0 @@
-com\example\serenity\pages\OpenWeatherMapHomePage.class
-com\example\serenity\pages\BasePage.class
-com\example\serenity\runner\CucumberTestSuite.class
-com\example\serenity\steps\WeatherSteps.class
