@@ -20,6 +20,7 @@ public class BasePage extends PageObject {
         }
     }
 
+
     /**
      wait for element clickable
      */

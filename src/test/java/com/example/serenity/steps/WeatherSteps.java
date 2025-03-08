@@ -4,26 +4,37 @@ import com.example.serenity.pages.OpenWeatherMapHomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import net.serenitybdd.annotations.Step;
 import org.junit.Assert;
 
 public class WeatherSteps {
 
     OpenWeatherMapHomePage openWeatherMapHomePage;
 
-    @Given("I open the OpenWeatherMap home page")
-    public void i_open_the_open_weather_map_home_page() {
+    @Step
+    public void openWeb(){
         openWeatherMapHomePage.openHomePage();
     }
 
-    @When("I search for the city {string}")
-    public void i_search_for_the_city(String city) {
-        openWeatherMapHomePage.searchCity(city);
+    @Step
+    public void searchCity(String cityName){
+        openWeatherMapHomePage.searchCity(cityName);
     }
 
-    @Then("I should see the city name {string} displayed correctly")
-    public void i_should_see_the_city_name_displayed_correctly(String expectedCity) {
+    @Step
+    public void verifyCityNameInResult(String expectedCity){
         String actualCity = openWeatherMapHomePage.getDisplayedCityName();
         Assert.assertTrue("City name did not match! Expected to contain: " + expectedCity,
                 actualCity.contains(expectedCity));
+    }
+
+    @Step
+    public void verifyCurrentDate(){
+        Assert.assertTrue(openWeatherMapHomePage.isDateDisplayedCorrectly());
+    }
+
+    @Step
+    public void verifyTemperature(){
+        Assert.assertTrue(openWeatherMapHomePage.isTemperatureDisplayedCorrectly());
     }
 }
