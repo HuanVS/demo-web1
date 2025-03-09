@@ -1,6 +1,6 @@
 package com.example.serenity.defs.web;
 
-import com.example.serenity.steps.WeatherSteps;
+import com.example.serenity.steps.web.WeatherSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

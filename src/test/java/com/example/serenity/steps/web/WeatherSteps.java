@@ -1,4 +1,4 @@
-package com.example.serenity.steps;
+package com.example.serenity.steps.web;
 
 import com.example.serenity.pages.OpenWeatherMapHomePage;
 import io.cucumber.java.en.Given;
